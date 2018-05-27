@@ -52,3 +52,36 @@ def describe_pet(pet_name,animal_type="dog"):
 describe_pet(pet_name='harry')  # 调用方法1
 describe_pet('DaMao')  # 调用方法2
 describe_pet(animal_type="Cat", pet_name='DaGou')
+
+print("=====================")
+#不定长参数（列表型）
+def PrintNum(a,*args,b=10):
+    print("a = "+str(a))
+    for i in args:
+        print("i = "+str(i))
+    print("b = "+str(b))
+PrintNum(1,2,3,4,5,6,b=100)
+
+print("=====================")
+#不定长参数（字典型）
+def PrintNums(a,**args):
+    print("a = "+str(a))
+    for k,v in args.items():
+        print(str(k)+":"+str(v))
+
+PrintNums(1,num1=2,num2=3,num3=4,num4=5)
+print("===================")
+sum = 0
+def Print3(a,*args,**kwargs):
+    global sum
+    print("a = " + str(a))
+    sum+=a
+    for i in args:
+        print("i = "+str(i))
+        sum+=i
+    for k,v in kwargs.items():
+        print(str(k)+":"+str(v))
+        sum+=v
+
+Print3(1,2,3,4,5,6,7,num=10,num2=100)
+print("sum = "+ str(sum))
