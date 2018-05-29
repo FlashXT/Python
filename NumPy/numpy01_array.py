@@ -1,6 +1,6 @@
 #coding=utf-8
 #################################################################################
-#NumPy的向量相加
+#NumPy学习
 #Author：FlashXT;
 #Date :2018.5.27,Sunday;
 #Copyright © 2018–2020 FlashXT and turboMan. All rights reserved.
@@ -30,10 +30,10 @@ def numpysum(n):
 
 print("====================")
 for i in pythonsum(5):
-	print("%-4d"%i,end="")
+	print("%-4d"%i)
 print("\n====================")
 for i in numpysum(5):
-	print("%-4d"%i,end="")
+	print("%-4d"%i)
 
 #耗时比较
 print("\n==============")
@@ -155,3 +155,51 @@ data5=[(names=="Tom")[2:]]
 print(data5)
 data6=[(names=="Tom")[3]]
 print(data6)
+
+mask = (names == 'Tom')|(names=='Kim')
+print("mask = "+ str(mask))
+data7=[mask]
+print(data7[0:])
+print("====================================")
+names!= "Bob"
+data8=[names != "Bob"]
+print(data8)
+data9=[(names=="Bob")]
+print("data9 = "+str(data9))
+
+data10=numpy.array([12,43,44,20])
+data11=([data10<20])
+print("data11 = "+str(data11))
+print(data10<10)
+
+print("========花式索引========")
+arrs = numpy.empty((8,8))
+for i in range(8):
+	arrs[i] = i
+
+print(arrs)
+print(arrs[[4,3,0,6]])
+
+print(arrs[[-3,-5,-7]])
+arrs2=numpy.arange(56).reshape((8,7))
+print(arrs2)
+print(arrs2[[5,4,2,1],[3,4,5,6]])
+print(arrs2[[5,4,2,1]][:,[4,5,6]])#分别选取arrs2中第（5，4，2，1）行中的第（4，5，6）列元素
+#分别选取arrs2中第（5，4，2，1）行中的第（3，4，5，6）列元素
+print(arrs2[numpy.ix_([5,4,2,1],[3,4,5,6])])
+
+print("======数组转置======")
+arrs3 = numpy.arange(15).reshape((3,5))
+print(arrs3)
+print(arrs3.T)
+print("======改变数组的维度======")
+arrs4 = numpy.arange(24).reshape(2,3,4)
+print(arrs4)
+print(arrs4.ravel())
+print(arrs4.flatten())
+arrs4.flatten()
+
+arrs4.resize(6,4)
+arrs5 = arrs4.shape(6,4)
+print(arrs5)
+print(arrs4)
