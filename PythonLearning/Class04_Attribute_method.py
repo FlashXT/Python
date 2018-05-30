@@ -14,7 +14,7 @@ class User:
         self.pwd = pwd #对象属性
 
     @classmethod#类方法在方法上面加上注释
-    def print(cls): #cls表示调用该方法的类
+    def print1(cls): #cls表示调用该方法的类
         cls.name = "XiaoMing"
         print("User类方法")
     @staticmethod#静态方法,属于类，没有默认参数(若有参数则必须要传递参数)，可以通通过类名和对象名调用；
@@ -28,7 +28,7 @@ user = User("123")
 
 print(user.name)
 print(User.name)
-print(user.print())
+print(user.print1())
 print(user.name)
 print(User.name)
 print(User.printA())

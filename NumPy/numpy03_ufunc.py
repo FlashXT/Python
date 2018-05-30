@@ -84,3 +84,43 @@ print(np.mean(arr4))
 print(np.mean(arr4,axis=0)) #axis=0,计算每一列的均值
 print(np.mean(arr4,axis=1)) #axis=0,计算每一行的均值
 print("arr4 = "+str(arr4.sum(0)))#第一列的和
+
+arr5=np.array([[0,1,2],[3,4,5],[6,7,8]])
+print(arr5)
+print(arr5.cumsum(0))
+print(arr5.cumprod(0))
+print(arr5.cumprod(1))
+
+#用于布尔型数组的方法
+print("============用于布尔型数组的方法=============")
+arr=randn(9)
+print((arr>0).sum())#输出正值的数量
+
+bools=np.array([False,False,True,False])
+print(bools.any())#测试数组中是否存在True
+print(bools.all())#测试数组中是否全为True
+arr.sort()
+print(arr)
+arr=randn(4,3)
+print(arr)
+arr.sort()#全部元素按从小到大排序
+print(arr)
+# arr.sort(1)#每行元素按从小到大排序
+# print(arr)
+# arr.sort(0)#每列元素按从小到大排序
+# print(arr)
+#排好顺序后就可以计算分位数
+print("===============计算分位数==================")
+arr2=randn(100)
+arr2.sort()
+print(arr2[(int)(0.5*len(arr))])#计算每一列的分位数
+
+#唯一化以及其他的集合逻辑
+print("==================唯一化以及其他的集合逻辑===================")
+names = np.array(['Bob','Joe','Will','Bob','Will','Bob'])
+names = np.unique(names)
+print(names)
+print(sorted(set(names)))
+
+values = np.array([6,0,0,3,4,5,6,2,3])
+print(np.in1d(values,[2,3,4]))
