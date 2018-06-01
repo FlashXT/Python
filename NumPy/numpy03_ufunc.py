@@ -124,3 +124,18 @@ print(sorted(set(names)))
 
 values = np.array([6,0,0,3,4,5,6,2,3])
 print(np.in1d(values,[2,3,4]))
+print("=============常用的numpy.linalg函数(线性代数)===============")
+
+x=np.array([[1,2,3],[4,5,6]])
+y=np.array([[6,23],[-1,7],[8,9]])
+print(x)
+print(y)
+print("====np.dot()矩阵乘法函数=======")
+print(x.dot(y))
+print(np.dot(x,y))
+print(np.ones(3))
+#numpy.ones((x,y))用来构造全一矩阵
+#numpy.zeros((x,y))用来构造全零矩阵
+print(np.zeros((3,3)))
+print(np.ones((3,3)))
+print(x.dot(np.ones((3,3))))

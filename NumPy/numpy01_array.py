@@ -200,6 +200,10 @@ print(arrs4.flatten())
 arrs4.flatten()
 
 arrs4.resize(6,4)
-arrs5 = arrs4.shape(6,4)
-print(arrs5)
+
 print(arrs4)
+arr6 = numpy.random.randint(0,10,(4,4))
+print("arr6 =\n "+ str(arr6))
+arr7=numpy.arange(16).reshape(4,4)
+print(arr7)
+print(numpy.diag(arr7))
