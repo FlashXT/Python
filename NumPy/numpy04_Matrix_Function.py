@@ -57,10 +57,26 @@ while( i in range(7)):
 	print(np.random.random())
 	i+=1
 arr=[1,2,3,4,5,6,7,8,9]
+#permutation()返回一个序列的随机排列或返回一个随机排列的范围
 print(np.random.permutation(arr))
+#shuffle()对一个序列就地随机排列
 np.random.shuffle(arr)
 print(arr)
+#rand()产生均匀分布的样本值
 arr2=np.random.rand(5,3)
 print(arr2)
+#binomial()产生二项分布的样本值
 arr3=np.random.binomial(3,0.5,(3,4))
 print(arr3)
+#normal(loc=0.0,scale=1.0,size=None)产生正态(高斯)分布的样本值
+#参数的含义：
+# ①loc:float    此概率分布的均值；
+# ②scale：float 此概率分布的标准差；
+# ③size:int or tuple of ints 输出的矩阵维度，默认为None,只输出一个值
+
+arr4=np.random.normal(0,1,(3,4))
+print(arr4)
+
+#beta(a,b,size)产生beta分布的样本值
+arr5=np.random.beta(1,2,(3,4))
+print(arr5)
