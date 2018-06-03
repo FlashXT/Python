@@ -40,3 +40,27 @@ b=[0,1,1,2]
 print(np.linalg.solve(a,b))
 #AX=B的最小二乘解
 print(np.linalg.lstsq(a,b,None))
+
+print("===============随机数生成==============")
+from random import normalvariate
+samples = np.random.normal(size=(4,4))
+print(samples)
+N=1
+#see()方法用于设置产生随机数的种子，之后需要调用random()方法产生随机数
+#seed( ) 用于指定随机数生成时所用算法开始的整数值。
+#1.如果使用相同的seed( )值，则每次生成的随即数都相同；
+#2.如果不设置这个值，则系统根据时间来自己选择这个值，此时每次生成的随机数因时间差异而不同。
+#3.设置的seed()值仅一次有效
+np.random.seed(N)
+i=0
+while( i in range(7)):
+	print(np.random.random())
+	i+=1
+arr=[1,2,3,4,5,6,7,8,9]
+print(np.random.permutation(arr))
+np.random.shuffle(arr)
+print(arr)
+arr2=np.random.rand(5,3)
+print(arr2)
+arr3=np.random.binomial(3,0.5,(3,4))
+print(arr3)
