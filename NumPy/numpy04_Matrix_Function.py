@@ -39,4 +39,4 @@ a=np.mat("1 2 3 4;3 5 6 7;4 3 2 2;1 3 5 0")
 b=[0,1,1,2]
 print(np.linalg.solve(a,b))
 #AX=B的最小二乘解
-print(np.linalg.lstsq(a,b))
+print(np.linalg.lstsq(a,b,None))
