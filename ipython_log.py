@@ -1,0 +1,15 @@
+# IPython log file
+
+get_ipython().magic(u'paste')
+get_ipython().magic(u'cpaste')
+get_ipython().magic(u'paste')
+get_ipython().magic(u'paste')
+get_ipython().magic(u'paste')
+get_ipython().magic(u'cpaste')
+get_ipython().magic(u'cpaste')
+get_ipython().magic(u'cpaste')
+get_ipython().magic(u'cpaste')
+get_ipython().magic(u'logstart')
+get_ipython().magic(u'bookmark defaultdir E:')
+get_ipython().magic(u'cd defaultdir')
+exit()
